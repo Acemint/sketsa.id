@@ -6,11 +6,11 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.widget.*;
 import android.view.*;
+import androidx.fragment.app.Fragment;
 import com.example.sketsaid.ui.login.LoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    BottomNavigationView bottomView;
     Button loginButton;
     public static final String MOVE = null;
 
@@ -19,30 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bottomView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
-        bottomView.setOnNavigationItemSelectedListener(
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    switch (item.getItemId()){
-                        case R.id.page_1:
-                            break;
-                        case R.id.page_2:
-                            moveToArtSearch(this);
-                            break;
-                        case R.id.page_3:
-                            break;
-                    }
-                    return false;
-                }
-            }
-        );
-    }
-
-    public void moveToArtSearch(BottomNavigationView.OnNavigationItemSelectedListener view) {
-        Intent intent = new Intent(this, Commission.class);
-        intent.putExtra(MOVE, "");
-        startActivity(intent);
+        //Get the bottom navigation menu
+//        FragmentBottomNavigation bottomNavigation = (FragmentBottomNavigation) getSupportFragmentManager().findFragmentById(R.id.FragmentBottom);
+//        FragmentTopNavigation topNavigation = (FragmentTopNavigation) getSupportFragmentManager().findFragmentById(R.id.FragmentTop);
     }
 
     public void moveToLogin(View view) {

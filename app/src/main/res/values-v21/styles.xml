@@ -6,10 +6,12 @@
     <style name="MainBackground">
         <item name="android:background">@color/colorBackground</item>
     </style>
+    <style name="TopNavigation">
+        <item name="android:background">@drawable/top_navbar_separator</item>
+    </style>
     <style name="BottomNavigation">
-        <item name="android:background">@color/colorWhite</item>
+        <item name="android:background">@drawable/bottom_navbar_separator</item>
         <item name="itemIconTint">@color/colorLightGray</item>
-        <item name="itemTextColor">@color/colorText</item>
         <item name="paddingStart">@dimen/bottom_navigation_padding</item>
         <item name="paddingEnd">@dimen/bottom_navigation_padding</item>
     </style>
