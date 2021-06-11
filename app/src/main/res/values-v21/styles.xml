@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="TransparentBackground">
+        <item name="android:backgroundTint">@color/colorTransparent</item>
+    </style>
+    <style name="MainBackground">
+        <item name="android:background">@color/colorBackground</item>
+    </style>
+    <style name="BottomNavigation">
+        <item name="android:background">@color/colorWhite</item>
+        <item name="itemIconTint">@color/colorLightGray</item>
+        <item name="itemTextColor">@color/colorText</item>
+        <item name="paddingStart">@dimen/bottom_navigation_padding</item>
+        <item name="paddingEnd">@dimen/bottom_navigation_padding</item>
+    </style>
     <style name="BasicContainedButton">
         <item name="android:fontFamily">@font/roboto_regular</item>
         <item name="android:textSize">12sp</item>
@@ -16,5 +29,8 @@
         <item name="android:fontFamily">@font/roboto_regular</item>
         <item name="android:textSize">24sp</item>
         <item name="android:background">@drawable/search_border</item>
+    </style>
+    <style name="CharacterButton">
+        <item name="android:background">@drawable/character_border</item>
     </style>
 </resources>
