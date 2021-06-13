@@ -1,40 +1,33 @@
 package com.example.sketsaid;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import androidx.fragment.app.Fragment;
 import com.example.sketsaid.ui.login.LoginActivity;
 
-public class FragmentTopNavigation extends Fragment {
-    public FragmentTopNavigation(){
-        super(R.layout.fragment_top_navigation);
+public class FragmentSearchTopNavigation extends Fragment {
+    public FragmentSearchTopNavigation(){
+        super(R.layout.fragment_search_top_navigation);
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_top_navigation, container, false);
+        View view = inflater.inflate(R.layout.fragment_search_top_navigation, container, false);
 
-        ImageButton logo = (ImageButton) view.findViewById(R.id.sketsaIdButton);
+        EditText searchBar = (EditText) view.findViewById(R.id.searchBar);
+        Button searchButotn = (Button) view.findViewById(R.id.searchButton);
         ImageButton character = (ImageButton) view.findViewById(R.id.characterButton);
-
-        logo.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(FragmentTopNavigation.super.getActivity(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
 
         character.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FragmentTopNavigation.super.getActivity(), LoginActivity.class);
+                Intent intent = new Intent(FragmentSearchTopNavigation.super.getActivity(), LoginActivity.class);
                 startActivity(intent);
             }
         });

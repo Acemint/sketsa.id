@@ -10,28 +10,24 @@
             android:id="@+id/fragmentTop"
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:name="com.example.sketsaid.FragmentTopNavigation" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"/>
-    <HorizontalScrollView
-            style="@style/MainBackground"
-            android:layout_width="match_parent"
-            android:layout_height="595dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/horizontalScrollView"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintBottom_toTopOf="@+id/fragmentBottom"
-            app:layout_constraintTop_toBottomOf="@+id/fragmentTop">
-        <LinearLayout
-                android:layout_width="wrap_content" android:layout_height="match_parent"
-                android:orientation="vertical"/>
-    </HorizontalScrollView>
+            app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContentSlider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="72dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/fragmentBottom"
+            app:layout_constraintTop_toTopOf="parent"/>
     <androidx.fragment.app.FragmentContainerView
             style="@style/BottomNavigation"
             android:id="@+id/fragmentBottom"
             android:layout_width="match_parent"
             android:layout_height="72dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:name="com.example.sketsaid.FragmentBottomNavigation"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 

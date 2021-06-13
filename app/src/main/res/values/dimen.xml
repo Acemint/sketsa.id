@@ -3,4 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="bottom_navigation_padding">16dp</dimen>
+    <dimen name="card_pad_lr">6dp</dimen>
+    <dimen name="card_pad_tb">8dp</dimen>
+    <dimen name="slider_pad_lr">12dp</dimen>
 </resources>

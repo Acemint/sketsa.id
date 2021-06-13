@@ -3,11 +3,31 @@
     <style name="TransparentBackground">
         <item name="android:backgroundTint">@color/colorTransparent</item>
     </style>
-    <style name="MainBackground">
+    <style name="Slider">
         <item name="android:background">@color/colorBackground</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_marginLeft">@dimen/slider_pad_lr</item>
+        <item name="android:layout_marginRight">@dimen/slider_pad_lr</item>
     </style>
     <style name="TopNavigation">
         <item name="android:background">@drawable/top_navbar_separator</item>
+    </style>
+    <style name="CardArt">
+        <item name="android:background">@drawable/card_border</item>
+        <item name="android:layout_width">121dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/card_pad_lr</item>
+        <item name="android:paddingRight">@dimen/card_pad_lr</item>
+        <item name="android:paddingTop">@dimen/card_pad_tb</item>
+        <item name="android:paddingBottom">@dimen/card_pad_tb</item>
+        <item name="android:layout_marginLeft">@dimen/card_pad_lr</item>
+        <item name="android:layout_marginRight">@dimen/card_pad_lr</item>
+    </style>
+    <style name="CardArtImage">
+        <item name="android:gravity">center</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">96dp</item>
     </style>
     <style name="BottomNavigation">
         <item name="android:background">@drawable/bottom_navbar_separator</item>
@@ -15,6 +35,7 @@
         <item name="paddingStart">@dimen/bottom_navigation_padding</item>
         <item name="paddingEnd">@dimen/bottom_navigation_padding</item>
     </style>
+
     <style name="BasicContainedButton">
         <item name="android:fontFamily">@font/roboto_regular</item>
         <item name="android:textSize">12sp</item>
@@ -35,4 +56,18 @@
     <style name="CharacterButton">
         <item name="android:background">@drawable/character_border</item>
     </style>
+
+    <style name="TitleText">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="ArtText">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="DecorationText">
+        <item name="android:textColor">@color/colorLightGray</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
 </resources>

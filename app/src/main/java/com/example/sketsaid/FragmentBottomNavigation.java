@@ -6,41 +6,55 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import com.example.sketsaid.ui.login.LoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class FragmentBottomNavigation extends Fragment {
-    public static final String MOVE = null;
     BottomNavigationView bottomNav;
 
     public FragmentBottomNavigation(){
         super(R.layout.fragment_bottom_navigation);
-//        bottomNav.setOnNavigationItemSelectedListener( new BottomNavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(MenuItem item) {
-//                switch (item.getItemId()){
-//                    case R.id.page_1:
-//                        break;
-//                    case R.id.page_2:
-////                        moveToArtSearch(this);
-//                        break;
-//                    case R.id.page_3:
-//                        break;
-//                }
-//                return false;
-//            }
-//        });
     }
 
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        return inflater.inflate(R.layout.activity_main, container, false);
-//    }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_bottom_navigation, container, false);
+        bottomNav = (BottomNavigationView) view.findViewById(R.id.bottom_navigation);
+        bottomNav.setSelectedItemId(R.id.page_2);
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item){
+                switch (item.getItemId()){
+                    case R.id.page_1:
+                        moveToLogin();
+                        break;
+                    case R.id.page_2:
+                        goToSearchBar();
+                        break;
+                    case R.id.page_3:
+//                      checkLogin();
+                        break;
+                }
+                return true;
+            }
+        });
+        return view;
+    }
 
-//    public void moveToArtSearch(BottomNavigationView.OnNavigationItemSelectedListener view) {
-//        Intent intent = new Intent(super.getActivity(), Commission.class);
-//        intent.putExtra(MOVE, "");
-//        startActivity(intent);
-//    }
+//    public bool checkLogin()
+    public void moveToLogin() {
+        FragmentTopNavigation topNavigation = new FragmentTopNavigation();
+        FragmentManager manager = getParentFragmentManager();
+        manager.beginTransaction().replace(R.id.fragmentTop, topNavigation).commit();
+    }
+
+    public void goToSearchBar(){
+        FragmentSearchTopNavigation searchTopNavigation = new FragmentSearchTopNavigation();
+        FragmentManager manager = getParentFragmentManager();
+        manager.beginTransaction().replace(R.id.fragmentTop, searchTopNavigation).commit();
+    }
 }
