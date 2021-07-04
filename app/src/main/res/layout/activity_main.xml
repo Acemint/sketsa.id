@@ -11,8 +11,8 @@
             android:layout_width="match_parent"
             android:layout_height="64dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+
     <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContent"
             android:layout_width="match_parent"
@@ -21,8 +21,8 @@
             android:layout_marginBottom="72dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/fragmentBottom"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/fragmentTop"
+            app:layout_constraintBottom_toTopOf="@+id/fragmentBottom"/>
     <androidx.fragment.app.FragmentContainerView
             style="@style/BottomNavigation"
             android:id="@+id/fragmentBottom"

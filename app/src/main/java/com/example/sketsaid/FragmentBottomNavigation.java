@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-import com.example.sketsaid.ui.login.LoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class FragmentBottomNavigation extends Fragment {
@@ -45,7 +44,7 @@ public class FragmentBottomNavigation extends Fragment {
         return view;
     }
 
-//    public bool checkLogin()
+
     public void moveToLogin() {
         FragmentTopNavigation topNavigation = new FragmentTopNavigation();
         FragmentManager manager = getParentFragmentManager();

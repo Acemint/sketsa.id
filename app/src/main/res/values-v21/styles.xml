@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="LoginTheme" parent="FirebaseUI">
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+
+        <item name="color">@color/colorBlack</item>
+        <item name="android:editTextColor">@color/colorBlack</item>
+        <item name="colorControlNormal">@color/colorLightGray</item>
+        <item name="colorControlActivated">@color/colorBlack</item>
+        <item name="colorControlHighlight">@color/colorBlack</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColorHint">@color/colorText</item>
+    </style>
+
+
     <style name="TransparentBackground">
         <item name="android:backgroundTint">@color/colorTransparent</item>
+    </style>
+    <style name="WhiteBackground">
+        <item name="android:backgroundTint">@color/colorWhite</item>
     </style>
     <style name="Slider">
         <item name="android:background">@color/colorBackground</item>
@@ -53,6 +70,12 @@
         <item name="android:textSize">24sp</item>
         <item name="android:background">@drawable/search_border</item>
     </style>
+
+
+    <style name="LoginButton">
+        <item name="android:background">@drawable/line_button</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
     <style name="CharacterButton">
         <item name="android:background">@drawable/character_border</item>
     </style>
@@ -68,6 +91,10 @@
     <style name="DecorationText">
         <item name="android:textColor">@color/colorLightGray</item>
         <item name="android:textSize">10sp</item>
+    </style>
+    <style name="TextHyperLink">
+        <item name="android:textColor">@color/colorHyperlink</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
 </resources>

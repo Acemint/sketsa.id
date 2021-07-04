@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                                   android:layout_height="match_parent">
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="64dp"
@@ -13,11 +13,11 @@
     <ImageButton
             style="@style/TransparentBackground"
             android:layout_width="64dp"
-            android:layout_height="48dp" app:srcCompat="@mipmap/sketsaid_icon_foreground"
-            android:id="@+id/sketsaIdButton"
+            android:layout_height="48dp" app:srcCompat="@mipmap/previous"
+            android:id="@+id/previousButton"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="4dp" android:layout_marginStart="4dp"/>
+            android:layout_marginLeft="4dp" android:layout_marginStart="4dp" android:background="#FFFFFF"/>
     <ImageButton
             style="@style/CharacterButton"
             android:layout_width="48dp"
@@ -34,4 +34,5 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toStartOf="@+id/characterButton"
             android:layout_marginTop="22dp" android:layout_marginEnd="20dp" android:layout_marginRight="20dp"
     />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

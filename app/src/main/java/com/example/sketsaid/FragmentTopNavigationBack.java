@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import com.example.sketsaid.Account.AccountDetailsActivity;
 import com.example.sketsaid.Account.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -16,10 +15,10 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.io.Serializable;
 
-public class FragmentTopNavigation extends Fragment implements Serializable {
-    private ImageButton character;
+public class FragmentTopNavigationBack extends Fragment implements Serializable {
+    private ImageButton previous;
     private TextView textUsername;
-    public FragmentTopNavigation(){
+    public FragmentTopNavigationBack(){
         super(R.layout.fragment_top_navigation);
     }
 
@@ -28,18 +27,17 @@ public class FragmentTopNavigation extends Fragment implements Serializable {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_top_navigation, container, false);
 
-        character = (ImageButton) view.findViewById(R.id.characterButton);
         textUsername = (TextView) view.findViewById(R.id.textFullName);
-
-        character.setOnClickListener(new View.OnClickListener(){
+        previous = (ImageButton) view.findViewById(R.id.sketsaIdButton);
+        previous.setImageResource(R.mipmap.previous);
+        previous.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                setLoginState();
-                checkLoginState();
+                getActivity().finish();
             }
         });
-
         checkLoginState();
+
         return view;
     }
 
@@ -59,10 +57,10 @@ public class FragmentTopNavigation extends Fragment implements Serializable {
         FirebaseUser user = mAuth.getCurrentUser();
         Intent intent;
         if(user != null){
-            intent = new Intent(FragmentTopNavigation.super.getContext(), AccountDetailsActivity.class);
+            intent = new Intent(getActivity(), AccountDetailsActivity.class);
         }
         else{
-            intent = new Intent(FragmentTopNavigation.super.getContext(), LoginActivity.class);
+            intent = new Intent(getActivity(), LoginActivity.class);
         }
         startActivity(intent);
     }

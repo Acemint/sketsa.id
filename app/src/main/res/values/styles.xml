@@ -5,6 +5,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="editTextStyle">@style/App_EditTextStyle</item>
+    </style>
+    <style name="App_EditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:imeOptions">flagNoExtractUi</item>
     </style>
 
 </resources>

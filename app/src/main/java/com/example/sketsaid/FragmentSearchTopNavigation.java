@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import androidx.fragment.app.Fragment;
-import com.example.sketsaid.ui.login.LoginActivity;
+import com.example.sketsaid.Account.LoginActivity;
 
 public class FragmentSearchTopNavigation extends Fragment {
     public FragmentSearchTopNavigation(){
@@ -21,7 +21,7 @@ public class FragmentSearchTopNavigation extends Fragment {
         View view = inflater.inflate(R.layout.fragment_search_top_navigation, container, false);
 
         EditText searchBar = (EditText) view.findViewById(R.id.searchBar);
-        Button searchButotn = (Button) view.findViewById(R.id.searchButton);
+        Button searchButton = (Button) view.findViewById(R.id.searchButton);
         ImageButton character = (ImageButton) view.findViewById(R.id.characterButton);
 
         character.setOnClickListener(new View.OnClickListener(){
@@ -33,4 +33,8 @@ public class FragmentSearchTopNavigation extends Fragment {
         });
         return view;
     }
+
+
 }
+
+

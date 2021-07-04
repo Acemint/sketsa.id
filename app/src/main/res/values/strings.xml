@@ -2,7 +2,7 @@
     <string name="app_name">Sketsa.id</string>
 
     <string name="search">Search</string>
-    <string name="login">Login</string>
+    <string name="login_username">Login</string>
 
 
     <string name="nav1">Message</string>

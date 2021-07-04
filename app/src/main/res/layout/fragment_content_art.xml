@@ -5,37 +5,40 @@
                                                    android:layout_height="match_parent">
 
     <ScrollView
+            style="@style/WhiteBackground"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical">
-
-        <!--TOP CONTENT-->
-        <TextView
-                android:text="Events and Promotions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/eventText"
-                style="@style/TitleText" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp" android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"/>
-        <ImageView
+            android:layout_height="match_parent">
+        <LinearLayout
                 android:layout_width="match_parent"
-                app:srcCompat="@mipmap/sample4" android:id="@+id/imageView3"
-                android:layout_height="264dp" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintTop_toBottomOf="@+id/eventText" android:layout_marginTop="12dp"/>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!--TOP CONTENT-->
+            <TextView
+                    style="@style/TitleText"
+                    android:text="Events and Promotions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eventText"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"/>
+            <ImageView
+                    android:layout_width="match_parent"
+                    app:srcCompat="@mipmap/sample4"
+                    android:id="@+id/imageView3"
+                    android:layout_height="264dp"
+                    android:layout_marginTop="12dp"/>
 
 
-        <!--MIDDLE CONTENT-->
+            <!--MIDDLE CONTENT-->
             <TextView
                     android:text="Trending Art"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/trendingText" style="@style/TitleText"
+                    android:layout_height="wrap_content" android:id="@+id/trendingText"
+                    style="@style/TitleText"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
-                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"/>
             <HorizontalScrollView
                     style="@style/Slider"
                     android:id="@+id/horizontalScrollView"
@@ -53,7 +56,7 @@
                         android:layout_height="match_parent">
 
                     <LinearLayout
-                            android:id="@+id/cardArt"
+                            android:id="@+id/cardArt1"
                             style="@style/CardArt"
                             android:orientation="vertical">
                         <ImageView
@@ -99,7 +102,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                            android:id="@+id/cardArt"
+                            android:id="@+id/cardArt2"
                             style="@style/CardArt"
                             android:orientation="vertical">
                         <ImageView
@@ -145,7 +148,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                            android:id="@+id/cardArt"
+                            android:id="@+id/cardArt3"
                             style="@style/CardArt"
                             android:orientation="vertical">
                         <ImageView
@@ -191,7 +194,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                            android:id="@+id/cardArt"
+                            android:id="@+id/cardArt4"
                             style="@style/CardArt"
                             android:orientation="vertical">
                         <ImageView
@@ -240,12 +243,23 @@
             </HorizontalScrollView>
 
             <!--BOTTOM CONTENT-->
+            <TextView
+                    style="@style/TitleText"
+                    android:text="Art of the Month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/best_art"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"/>
             <ImageView
                     android:layout_width="match_parent"
-                    app:srcCompat="@mipmap/sample4" android:id="@+id/imageView4"
-                    android:layout_height="264dp" app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" android:layout_marginTop="32dp"/>
+                    app:srcCompat="@mipmap/sample5"
+                    android:id="@+id/imageView4"
+                    android:layout_height="264dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"/>
 
         </LinearLayout>
     </ScrollView>
